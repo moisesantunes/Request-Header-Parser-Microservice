@@ -24,7 +24,12 @@ app.get("/", function (req, res) {
 // your first API endpoint... 
 app.get("/api/hello", function (req, res) {
   var ip = os.networkInterfaces();//ip 
-  res.json({greeting: ip.lo[0].address});
+  res.json(
+    {
+      greeting: ip.lo[0].address,
+      cabeca: req.rawHeaders
+    }
+  );
   
 });
 
