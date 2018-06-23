@@ -27,7 +27,8 @@ app.get("/api/hello", function (req, res) {
   res.json(
     {
       greeting: ip.lo[0].address,
-      message: req.headers['user-agent'],
+      software: req.headers['user-agent'],
+      language: 
       //cabeca: req.rawHeaders
     }
   );
