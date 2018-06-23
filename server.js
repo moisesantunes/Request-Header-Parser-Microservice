@@ -26,9 +26,9 @@ app.get("/api/hello", function (req, res) {
   var ip = os.networkInterfaces();//ip 
   res.json(
     {
-      greeting: server.address(),
-      message: req.headers,
-      cabeca: req.rawHeaders
+      greeting: ip.lo[0].address,
+      message: req.headers['user-agent'],
+      //cabeca: req.rawHeaders
     }
   );
   
